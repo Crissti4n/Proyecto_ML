@@ -9,7 +9,7 @@ grado desarrollada en la **Universidad Nacional de Colombia**.
 
 ## Descripción del pipeline
 
-### 1. `dataset_preparation.py` — Construcción del dataset
+### 1. `CSV_IMG_satelitales.py` — Construcción del dataset
 
 Procesa 20 pares de imágenes multiespectrales y clasificadas en formato `.img`
 (ERDAS IMAGINE) correspondientes al periodo 1993–2003. De cada píxel válido
@@ -32,7 +32,7 @@ Salida: `Dataset.csv`, con una observación por píxel en formato tabular.
 
 ---
 
-### 2. `random_forest_training.py` — Entrenamiento y evaluación del modelo
+### 2. `modelo_random_forest.py` — Entrenamiento y evaluación del modelo
 
 Entrena un clasificador **Random Forest** sobre `Dataset.csv` siguiendo el
 flujo de trabajo descrito a continuación:
@@ -69,7 +69,7 @@ Salida: `modelo_random_forest.pkl`, modelo serializado listo para su uso.
 
 ---
 
-### 3. `classification_algorithm.py` — Algoritmo de clasificación espacial
+### 3. `clasificación_binaria_forest.py` — Algoritmo de clasificación espacial
 
 Aplica el modelo entrenado de forma interactiva sobre cualquier escena del
 dataset siguiendo estas etapas:
